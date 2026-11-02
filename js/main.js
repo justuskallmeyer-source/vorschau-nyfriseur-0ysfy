@@ -88,9 +88,9 @@ function zeile(text, cap) {
 function mosaik(cv) {
   const W = cv.clientWidth;
   if (!W) return;
-  const zeilen = W < 680 ? ['NEW YORK', 'FRISEUR'] : ['NEW YORK FRISEUR'];
+  const zeilen = W < 900 ? ['NEW YORK', 'FRISEUR'] : ['NEW YORK FRISEUR'];
   const RAHMEN = 5, PAD = 3, ABST = 4;
-  const ziel = W < 680 ? 3.4 : 5.2;        // gewünschte Fliesengröße in px
+  const ziel = W < 680 ? 3.4 : W < 1100 ? 4.4 : 5.2;   // gewünschte Fliesengröße in px
   let cap = 7, plan;
   for (let c = 7; c <= 30; c++) {
     const z = zeilen.map(t => zeile(t, c));
