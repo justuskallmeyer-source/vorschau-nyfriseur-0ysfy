@@ -3,21 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>New York Friseur | Herrenfriseur und Barbershop in München-Laim</title>
-<meta name="description" content="Herrenfriseur und Barbershop an der Elsenheimerstraße 4a in München-Laim. Haarschnitt, Fade, Bart und Augenbrauen. Montag bis Freitag 9:30 bis 19:30 Uhr, Samstag bis 19 Uhr.">
+<title>New York Friseur | Damen- und Herrenfriseur in München-Laim</title>
+<meta name="description" content="Damen- und Herrenfriseur an der Elsenheimerstraße 4a in München-Laim. Fade, Bart, Schnitt, Farbe und Strähnen, mit und ohne Termin. Montag bis Freitag 9:30 bis 19:30 Uhr.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#121212">
+<meta name="theme-color" content="#1c1b1c">
+<link rel="preload" href="fonts/playfair-display-normal-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-normal-300-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121212'/%3E%3Crect x='11' y='3' width='10' height='26' rx='2' fill='%23fff'/%3E%3Cpath d='M11 7l10-4v5l-10 4zM11 16l10-4v5l-10 4zM11 25l10-4v5l-10 4z' fill='%23b5121b'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1b1c'/%3E%3Crect x='11' y='3' width='10' height='26' rx='2' fill='%23f2eee6'/%3E%3Cpath d='M11 7l10-4v5l-10 4zM11 16l10-4v5l-10 4zM11 25l10-4v5l-10 4z' fill='%23b8975f'/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "name": "New York Friseur",
-  "description": "Herrenfriseur und Barbershop in München-Laim",
+  "description": "Damen- und Herrenfriseur in München-Laim, mit und ohne Termin",
   "telephone": "+49 89 51446908",
+  "priceRange": "€",
   "address": {"@type": "PostalAddress", "streetAddress": "Elsenheimerstraße 4a", "postalCode": "80687", "addressLocality": "München", "addressCountry": "DE"},
   "geo": {"@type": "GeoCoordinates", "latitude": 48.1406037, "longitude": 11.5183493},
   "openingHoursSpecification": [
@@ -29,128 +31,232 @@
 </head>
 <body>
 
-<header class="kopf">
+<header class="kopf" data-kopf>
   <div class="wrap kopf__in">
-    <a class="kopf__marke" href="#top">New York Friseur</a>
+    <a class="marke" href="#top" aria-label="New York Friseur, zum Seitenanfang">
+      <svg class="marke__saeule" viewBox="0 0 14 40" aria-hidden="true"><rect x="1" y="1" width="12" height="38" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 9l10-5v5L2 14zM2 19l10-5v5L2 24zM2 29l10-5v5L2 34z" fill="currentColor"/></svg>
+      <span class="marke__text">New York <span>Friseur</span></span>
+    </a>
     <nav class="kopf__nav" aria-label="Seitenbereiche">
+      <a href="#leistungen">Leistungen</a>
       <a href="#preise">Preise</a>
-      <a href="#zeiten">Öffnungszeiten</a>
-      <a href="#anfahrt">Anfahrt</a>
+      <a href="#laden">Der Laden</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="kopf__tel" href="tel:+498951446908"><span class="nur-klein">Anrufen</span><span class="nur-gross">089 51446908</span></a>
+    <a class="knopf knopf--gold kopf__tel" href="tel:+498951446908"><span class="nur-klein">Anrufen</span><span class="nur-gross">089 51446908</span></a>
   </div>
 </header>
 
 <main id="top">
 
   <section class="hero" aria-labelledby="titel">
-    <div class="wrap">
-      <h1 id="titel" class="sr">New York Friseur, Herrenfriseur in München-Laim</h1>
-      <div class="schild">
-        <canvas class="mosaik" data-mosaik role="img" aria-label="Mosaikschild: New York Friseur"></canvas>
-      </div>
-      <div class="hero__unten">
-        <div class="hero__text">
-          <p class="hero__lead">Herrenfriseur an der Elsenheimerstraße in Laim. Haarschnitt, Fade, Bart und Augenbrauen, sechs Tage die Woche.</p>
-          <p class="status" data-status>Montag bis Freitag 9:30 bis 19:30 Uhr, Samstag 9:30 bis 19 Uhr</p>
-          <div class="knoepfe">
-            <a class="knopf knopf--rot" href="tel:+498951446908">Anrufen: 089 51446908</a>
-            <a class="knopf" href="#anfahrt">Anfahrt</a>
-          </div>
-        </div>
-        <div class="saeule" aria-hidden="true">
-          <span class="saeule__kappe"></span>
-          <span class="saeule__glas"><span class="saeule__streifen"></span></span>
-          <span class="saeule__kappe saeule__kappe--unten"></span>
-        </div>
+    <picture class="hero__bild">
+      <source media="(min-width: 760px)" srcset="img/laden-innen-quer-1600.webp 1600w, img/laden-innen-quer-2400.webp 2400w" sizes="100vw">
+      <img src="img/laden-innen-800.webp" srcset="img/laden-innen-800.webp 800w, img/laden-innen-1600.webp 1600w" sizes="100vw" alt="Der Salon von innen: Lichtdecke aus Sechsecken über den Bedienplätzen" fetchpriority="high">
+    </picture>
+    <div class="wrap hero__inhalt">
+      <svg class="hero__saeule" viewBox="0 0 14 40" aria-hidden="true"><rect x="1" y="1" width="12" height="38" rx="6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M2 9l10-5v5L2 14zM2 19l10-5v5L2 24zM2 29l10-5v5L2 34z" fill="currentColor"/></svg>
+      <h1 id="titel">New York Friseur</h1>
+      <p class="hero__unter">Damen- und Herrenfriseur in München-Laim</p>
+      <p class="hero__zeile">Mit und ohne Termin. <span data-status>Montag bis Samstag ab 9:30 Uhr.</span></p>
+      <div class="knoepfe">
+        <a class="knopf knopf--gold" href="tel:+498951446908">Termin: 089 51446908</a>
+        <a class="knopf knopf--linie" href="#preise">Preisliste</a>
       </div>
     </div>
   </section>
 
-  <section class="preise" id="preise" aria-labelledby="preise-titel">
-    <div class="wrap preise__in">
-      <div class="preise__text">
-        <h2 id="preise-titel">Leistungen und Preise</h2>
-        <p>Jeder Schnitt beginnt mit einer kurzen Absprache am Stuhl: wie kurz an den Seiten, wie viel oben, Übergang hart oder weich. Danach Maschine, Schere und Messer für die Kontur.</p>
-        <p>Termine gibt es telefonisch. Ohne Termin kommst du dran, sobald ein Stuhl frei ist.</p>
-        <p class="klein">Alle Preise in Euro.</p>
+  <section class="abschnitt" id="leistungen" aria-labelledby="leistungen-titel">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <h2 id="leistungen-titel">Unsere Leistungen</h2>
+        <p>Vom Fade mit sauberem Übergang über die Bartrasur bis zu Farbe und Strähnen. Herren, Damen und Kinder sind bei uns gleichermaßen zu Hause.</p>
       </div>
-      <div class="tafel">
-        <div class="tafel__filz">
-          <ul class="tafel__liste" data-tafel>
-            <li><span>Haarschnitt</span><span>25</span></li>
-            <li><span>Maschinenschnitt</span><span>18</span></li>
-            <li><span>Fade</span><span>28</span></li>
-            <li><span>Bart trimmen und Kontur</span><span>15</span></li>
-            <li><span>Haarschnitt mit Bart</span><span>38</span></li>
-            <li><span>Rasur mit heißem Tuch</span><span>22</span></li>
-            <li><span>Augenbrauen</span><span>8</span></li>
-            <li><span>Kinder bis 12 Jahre</span><span>18</span></li>
+      <div class="karten">
+        <article class="karte">
+          <img src="img/fade-hinten-800.webp" srcset="img/fade-hinten-800.webp 800w, img/fade-hinten-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="Skin Fade am Hinterkopf, frisch geschnitten" loading="lazy" width="800" height="1067">
+          <div class="karte__text">
+            <h3>Herren</h3>
+            <p>Klassischer Schnitt, Fade, Kontur mit dem Messer. Waschen und Styling auf Wunsch.</p>
+            <p class="karte__preis">ab 15 €</p>
+            <a class="karte__link" href="#preise" data-tab-link="herren">Preise Herren</a>
+          </div>
+        </article>
+        <article class="karte">
+          <img src="img/bart-800.webp" srcset="img/bart-800.webp 800w, img/bart-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="Kunde mit gepflegtem Vollbart und zurückgekämmtem Haar im Bedienstuhl" loading="lazy" width="800" height="1067">
+          <div class="karte__text">
+            <h3>Bart</h3>
+            <p>Bart mit der Maschine, Bartrasur mit dem Messer oder Bart färben. Augenbrauen und Gesicht gleich mit.</p>
+            <p class="karte__preis">ab 6 €</p>
+            <a class="karte__link" href="#preise" data-tab-link="herren">Preise Bart</a>
+          </div>
+        </article>
+        <article class="karte">
+          <img src="img/stufen-blond-800.webp" srcset="img/stufen-blond-800.webp 800w, img/stufen-blond-1600.webp 1600w" sizes="(min-width: 900px) 33vw, 100vw" alt="Blonder Stufenschnitt mit Strähnen, von hinten" loading="lazy" width="800" height="1067">
+          <div class="karte__text">
+            <h3>Damen</h3>
+            <p>Schneiden, Föhnen, Ansatz und komplette Farbe, Strähnen, Blondierung und Dauerwelle.</p>
+            <p class="karte__preis">ab 24 €</p>
+            <a class="karte__link" href="#preise" data-tab-link="damen">Preise Damen</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt abschnitt--dunkel" id="preise" aria-labelledby="preise-titel">
+    <div class="wrap preise">
+      <div class="kopfzeile">
+        <h2 id="preise-titel">Preisliste</h2>
+        <p>Alle Preise in Euro. Bei Damen richtet sich der Preis nach der Haarlänge.</p>
+      </div>
+      <div class="reiter" role="tablist" aria-label="Preisliste" data-reiter hidden>
+        <button role="tab" id="tab-herren" aria-controls="p-herren" aria-selected="true">Herren</button>
+        <button role="tab" id="tab-damen" aria-controls="p-damen" aria-selected="false" tabindex="-1">Damen</button>
+        <button role="tab" id="tab-kinder" aria-controls="p-kinder" aria-selected="false" tabindex="-1">Kinder</button>
+      </div>
+
+      <div class="liste" id="p-herren" role="tabpanel" aria-labelledby="tab-herren">
+        <h3 class="liste__titel">Herren</h3>
+        <table>
+          <tbody>
+            <tr><th scope="row">Schneiden</th><td>ab 15</td></tr>
+            <tr><th scope="row">Waschen, Schneiden</th><td>ab 19</td></tr>
+            <tr><th scope="row">Waschen, Föhnen</th><td>8</td></tr>
+            <tr><th scope="row">Färben ohne Schnitt</th><td>20</td></tr>
+            <tr><th scope="row">Strähnen ohne Schnitt</th><td>22</td></tr>
+            <tr><th scope="row">Bart nur mit Maschine</th><td>6</td></tr>
+            <tr><th scope="row">Bartrasur</th><td>10</td></tr>
+            <tr><th scope="row">Bart färben</th><td>10</td></tr>
+            <tr><th scope="row">Augenbrauen zupfen</th><td>5</td></tr>
+            <tr><th scope="row">Haarentfernung Gesicht</th><td>5</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="liste" id="p-damen" role="tabpanel" aria-labelledby="tab-damen">
+        <h3 class="liste__titel">Damen</h3>
+        <table class="liste--damen">
+          <thead><tr><th scope="col"><span class="sr">Leistung</span></th><th scope="col">Kurz</th><th scope="col">Mittel</th><th scope="col">Lang</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Schneiden</th><td>24</td><td>28</td><td>ab 32</td></tr>
+            <tr><th scope="row">Waschen, Schneiden</th><td>28</td><td>32</td><td>ab 38</td></tr>
+            <tr><th scope="row">Waschen, Schneiden, Föhnen</th><td>40</td><td>45</td><td>ab 50</td></tr>
+            <tr><th scope="row">Waschen, Föhnen</th><td>25</td><td>30</td><td>ab 35</td></tr>
+            <tr><th scope="row">Ansatzfarbe</th><td>30</td><td>35</td><td>ab 40</td></tr>
+            <tr><th scope="row">Komplett färben</th><td>35</td><td>40</td><td>ab 45</td></tr>
+            <tr><th scope="row">Strähnen Oberkopf</th><td>40</td><td>45</td><td>ab 50</td></tr>
+            <tr><th scope="row">Dauerwelle</th><td>45</td><td>50</td><td>ab 60</td></tr>
+            <tr><th scope="row">Ansatz blondieren</th><td>ab 25</td><td>ab 40</td><td>ab 45</td></tr>
+            <tr><th scope="row">Tönung</th><td>35</td><td>40</td><td>ab 45</td></tr>
+          </tbody>
+        </table>
+        <table class="liste--extra">
+          <tbody>
+            <tr><th scope="row">Augenbrauen zupfen</th><td>8</td></tr>
+            <tr><th scope="row">Augenbrauen färben</th><td>8</td></tr>
+            <tr><th scope="row">Wimpern färben</th><td>8</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="liste" id="p-kinder" role="tabpanel" aria-labelledby="tab-kinder">
+        <h3 class="liste__titel">Kinder</h3>
+        <table>
+          <tbody>
+            <tr><th scope="row">Kinder bis 12 Jahre</th><td>ab 12</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt" id="arbeit" aria-labelledby="arbeit-titel">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <h2 id="arbeit-titel">Unsere Arbeit</h2>
+        <p>Ein paar Schnitte aus den letzten Wochen, direkt am Platz fotografiert.</p>
+      </div>
+      <div class="galerie" data-galerie>
+        <a href="img/fade-seite-1600.webp"><img src="img/fade-seite-800.webp" alt="Kurzer Fade mit Seitenscheitel, Profil" loading="lazy" width="800" height="1067"></a>
+        <a href="img/bob-grau-1600.webp"><img src="img/bob-grau-800.webp" alt="Grauer Bob mit glatter Kante" loading="lazy" width="800" height="1067"></a>
+        <a href="img/rot-800.webp"><img src="img/rot-800.webp" alt="Langes Haar in Kupferrot, frisch gefärbt" loading="lazy" width="800" height="1067"></a>
+        <a href="img/fade-hinten-1600.webp"><img src="img/fade-hinten-800.webp" alt="Mid Fade von hinten im Bedienstuhl" loading="lazy" width="800" height="1067"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="laden" id="laden" aria-labelledby="laden-titel">
+    <div class="laden__bild">
+      <img src="img/fassade-800.webp" srcset="img/fassade-800.webp 800w, img/fassade-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" alt="Ladenfront an der Elsenheimerstraße mit Schriftzug New York Friseur" loading="lazy" width="800" height="1067">
+    </div>
+    <div class="laden__text">
+      <h2 id="laden-titel">Der Laden</h2>
+      <p>Du findest uns an der Elsenheimerstraße 4a, ein paar Schritte von der Landsberger Straße. Drinnen hängt eine Lichtdecke aus Sechsecken über den Plätzen, an der Wand stehen Pflegeprodukte für Haar und Bart.</p>
+      <p>Einen Termin kannst du telefonisch ausmachen. Du kannst aber auch einfach vorbeikommen, dann bist du dran, sobald ein Platz frei ist.</p>
+      <div class="bewertung">
+        <p class="bewertung__zahl"><span class="sterne" aria-hidden="true">★★★★★</span> 4,5 von 5</p>
+        <p>bei 82 Bewertungen auf Google. Gelobt werden vor allem saubere Schnitte, die genau so werden wie besprochen, ein freundliches Team, kurze Wartezeiten und faire Preise.</p>
+        <a class="karte__link" href="https://www.google.com/maps/search/?api=1&amp;query=New+York+Friseur+Elsenheimerstra%C3%9Fe+4a+M%C3%BCnchen" rel="noopener">Bewertungen auf Google lesen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="abschnitt abschnitt--dunkel" id="kontakt" aria-labelledby="kontakt-titel">
+    <div class="wrap">
+      <div class="kopfzeile">
+        <h2 id="kontakt-titel">Komm vorbei</h2>
+        <p>Mit und ohne Termin. Für einen festen Termin einfach kurz anrufen.</p>
+      </div>
+      <div class="kontakt">
+        <div>
+          <h3>Adresse</h3>
+          <address>New York Friseur<br>Elsenheimerstraße 4a<br>80687 München</address>
+          <p><a class="tel" href="tel:+498951446908">089 51446908</a></p>
+          <ul class="linien">
+            <li><span class="kreis">18</span><span class="kreis">19</span><span>Tram bis Lautensackstraße, dann rund 100 Meter</span></li>
+            <li><span class="kreis">U</span><span>U4 und U5 bis Westendstraße, etwa 10 Minuten zu Fuß</span></li>
+            <li><span class="kreis">S</span><span>S-Bahnhof Laim, etwa 15 Minuten zu Fuß</span></li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="laden" aria-labelledby="laden-titel">
-    <div class="wrap laden__in">
-      <h2 id="laden-titel">Bewertungen</h2>
-      <div class="laden__text">
-        <p class="gross">4,5 von 5 Sternen bei 74 Google-Bewertungen.</p>
-        <p>Am häufigsten genannt werden saubere Schnitte, die genau so werden wie besprochen, ein freundliches Team, kurze Wartezeiten und faire Preise. Mehrere Stammkunden heben außerdem die Arbeit an Bart und Augenbrauen hervor.</p>
-        <p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=New+York+Friseur+Elsenheimerstra%C3%9Fe+4a+M%C3%BCnchen" rel="noopener">Alle Bewertungen auf Google lesen</a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="info" aria-label="Öffnungszeiten und Anfahrt">
-    <div class="wrap info__in">
-      <div class="zeiten" id="zeiten">
-        <h2>Öffnungszeiten</h2>
-        <dl class="zeiten__liste" data-zeiten>
-          <div data-tag="1"><dt>Montag</dt><dd>9:30 bis 19:30</dd></div>
-          <div data-tag="2"><dt>Dienstag</dt><dd>9:30 bis 19:30</dd></div>
-          <div data-tag="3"><dt>Mittwoch</dt><dd>9:30 bis 19:30</dd></div>
-          <div data-tag="4"><dt>Donnerstag</dt><dd>9:30 bis 19:30</dd></div>
-          <div data-tag="5"><dt>Freitag</dt><dd>9:30 bis 19:30</dd></div>
-          <div data-tag="6"><dt>Samstag</dt><dd>9:30 bis 19:00</dd></div>
-          <div data-tag="0"><dt>Sonntag</dt><dd>geschlossen</dd></div>
-        </dl>
-      </div>
-      <div class="anfahrt" id="anfahrt">
-        <h2>Anfahrt</h2>
-        <address>
-          New York Friseur<br>
-          Elsenheimerstraße 4a<br>
-          80687 München
-        </address>
-        <ul class="linien">
-          <li><span class="kreis">18</span><span class="kreis">19</span><span>Tram bis Lautensackstraße, von dort rund 100 Meter</span></li>
-          <li><span class="kreis">U</span><span>U4 und U5 bis Westendstraße, etwa 10 Minuten zu Fuß</span></li>
-          <li><span class="kreis">S</span><span>S-Bahnhof Laim, etwa 15 Minuten zu Fuß</span></li>
-        </ul>
-        <div class="knoepfe">
-          <a class="knopf knopf--dunkel" href="https://www.google.com/maps/dir/?api=1&amp;destination=Elsenheimerstra%C3%9Fe+4a%2C+80687+M%C3%BCnchen" rel="noopener">Route planen</a>
-          <a class="knopf" href="tel:+498951446908">089 51446908</a>
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <dl class="zeiten" data-zeiten>
+            <div data-tag="1"><dt>Montag</dt><dd>9:30 bis 19:30</dd></div>
+            <div data-tag="2"><dt>Dienstag</dt><dd>9:30 bis 19:30</dd></div>
+            <div data-tag="3"><dt>Mittwoch</dt><dd>9:30 bis 19:30</dd></div>
+            <div data-tag="4"><dt>Donnerstag</dt><dd>9:30 bis 19:30</dd></div>
+            <div data-tag="5"><dt>Freitag</dt><dd>9:30 bis 19:30</dd></div>
+            <div data-tag="6"><dt>Samstag</dt><dd>9:30 bis 19:00</dd></div>
+            <div data-tag="0"><dt>Sonntag</dt><dd>geschlossen</dd></div>
+          </dl>
         </div>
       </div>
+      <div class="knoepfe kontakt__knoepfe">
+        <a class="knopf knopf--gold" href="tel:+498951446908">Jetzt anrufen</a>
+        <a class="knopf knopf--linie" href="https://www.google.com/maps/dir/?api=1&amp;destination=Elsenheimerstra%C3%9Fe+4a%2C+80687+M%C3%BCnchen" rel="noopener">Route planen</a>
+      </div>
+      <figure class="stadtplan">
+        <img src="img/karte.svg" width="1200" height="800" alt="Karte der Umgebung: der Laden liegt an der Elsenheimerstraße kurz hinter der Landsberger Straße, die Tramhaltestelle Lautensackstraße ist rund 100 Meter entfernt." loading="lazy">
+      </figure>
     </div>
-    <figure class="karte wrap">
-      <img src="img/karte.svg" width="1200" height="800" alt="Karte der Umgebung: der Laden liegt an der Elsenheimerstraße kurz hinter der Landsberger Straße, die Tramhaltestelle Lautensackstraße ist rund 100 Meter entfernt." loading="lazy">
-    </figure>
   </section>
 
 </main>
 
 <footer class="fuss">
-  <div class="fuss__boden" aria-hidden="true"></div>
   <div class="wrap fuss__in">
-    <p class="fuss__marke">New York Friseur</p>
-    <p>Elsenheimerstraße 4a, 80687 München<br><a href="tel:+498951446908">089 51446908</a></p>
+    <p class="marke marke--fuss"><svg class="marke__saeule" viewBox="0 0 14 40" aria-hidden="true"><rect x="1" y="1" width="12" height="38" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 9l10-5v5L2 14zM2 19l10-5v5L2 24zM2 29l10-5v5L2 34z" fill="currentColor"/></svg><span class="marke__text">New York <span>Friseur</span></span></p>
+    <p>Elsenheimerstraße 4a<br>80687 München<br><a href="tel:+498951446908">089 51446908</a></p>
     <p>Mo bis Fr 9:30 bis 19:30 Uhr<br>Sa 9:30 bis 19:00 Uhr</p>
     <p><a href="impressum.html">Impressum</a><br><a href="datenschutz.html">Datenschutz</a></p>
   </div>
 </footer>
+
+<dialog class="lightbox" data-lightbox aria-label="Foto groß">
+  <img alt="">
+  <button type="button" class="lightbox__zu" aria-label="Schließen">×</button>
+</dialog>
 
 <script src="js/main.js"></script>
 </body>

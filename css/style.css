@@ -1,206 +1,202 @@
 /* New York Friseur, München-Laim
-   Mobile first, Stufen bei 600 / 900 / 1200 px.
-   Motive aus dem echten Barbershop- und New-York-Fundus: Metro-Fliesen, Mosaikschild,
-   Barbiersäule, Steckbuchstaben-Tafel, Schachbrettboden. */
+   Fassung 2: dunkel mit Gold, große Fotos aus dem Laden (Google-Profil des Inhabers).
+   Mobile first, Stufen bei 600 / 900 / 1200 px. */
 
 :root {
-  --fliese: #f1eee6;
-  --fuge: #d6d0c3;
-  --tinte: #121212;
-  --text: #2b2b2b;
-  --grau: #4a4741;
-  --rot: #b5121b;
-  --rot-dunkel: #8f0d14;
-  --blau: #1c2d5c;
-  --messing: #b48a3c;
-  --papier: #efece3;
+  --grund: #1c1b1c;
+  --flaeche: #242224;
+  --linie: #3a373a;
+  --gold: #b8975f;
+  --gold-hell: #cdb07a;
+  --text: #e9e5dd;
+  --grau: #bdb7ac;
   --wrap: 1240px;
   --rand: clamp(16px, 4vw, 40px);
+  --serif: "Playfair Display", Georgia, serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 72px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text);
-  background: var(--papier);
-  font-variation-settings: "wdth" 100;
+  background: var(--grund);
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
-h1, h2, h3 { margin: 0; font-weight: 750; line-height: 1.1; letter-spacing: -.01em; color: var(--tinte); hyphens: auto; }
-h2 { font-size: clamp(30px, 5vw, 46px); font-variation-settings: "wdth" 88; }
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-variant-numeric: lining-nums; font-weight: 500; line-height: 1.12; color: var(--gold); hyphens: manual; }
+h2 { font-size: clamp(32px, 5vw, 50px); }
+h3 { font-size: clamp(24px, 2.6vw, 30px); }
 p { margin: 0 0 1em; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--rand); }
 .nur-gross { display: none; }
-.nur-klein { display: inline; }
-.klein { font-size: 16px; color: var(--grau); }
 
-/* Kopfzeile */
-.kopf { position: sticky; top: 0; z-index: 20; background: var(--tinte); color: #fff; }
-.kopf__in { display: flex; align-items: center; gap: 16px; height: 60px; }
-.kopf__marke { font-weight: 800; font-size: 19px; text-decoration: none; font-variation-settings: "wdth" 85; white-space: nowrap; }
-.kopf__nav { display: none; gap: 28px; margin-left: auto; }
-.kopf__nav a { text-decoration: none; font-size: 16px; color: #d9d6cf; }
-.kopf__nav a:hover { color: #fff; }
-.kopf__tel {
-  margin-left: auto; text-decoration: none; font-weight: 700; font-size: 16px;
-  padding: 8px 14px; background: var(--rot); white-space: nowrap;
-}
-.kopf__tel:hover { background: var(--rot-dunkel); }
+/* Marke: Barbiersäule wie auf dem Ladenschild */
+.marke { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--gold); }
+.marke__saeule { width: 12px; height: 34px; flex: none; }
+.marke__text { font-family: var(--serif); font-size: 21px; font-weight: 500; color: var(--text); white-space: nowrap; }
+.marke__text span { color: var(--gold); }
 
-/* Hero: Wand aus Metro-Fliesen */
-.hero {
-  padding: clamp(28px, 6vw, 72px) 0 clamp(36px, 6vw, 80px);
-  background-color: var(--fuge);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fbfaf6'/%3E%3Cstop offset='.5' stop-color='%23f1eee6'/%3E%3Cstop offset='1' stop-color='%23e7e3d8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='url(%23g)'%3E%3Crect x='1.5' y='1.5' width='117' height='37' rx='3'/%3E%3Crect x='-58.5' y='41.5' width='117' height='37' rx='3'/%3E%3Crect x='61.5' y='41.5' width='117' height='37' rx='3'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 120px 80px;
-}
-.schild {
-  padding: clamp(6px, 1vw, 10px);
-  background: #a59e8f;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0 18px 40px -22px rgba(0, 0, 0, .45);
-}
-.mosaik { display: block; width: 100%; height: auto; }
-
-.hero__unten { display: grid; grid-template-columns: 1fr auto; gap: clamp(20px, 4vw, 56px); align-items: start; margin-top: clamp(24px, 4vw, 48px); }
-.hero__text { max-width: 640px; background: rgba(241, 238, 230, .92); padding: clamp(16px, 3vw, 28px); box-shadow: 0 0 0 1px var(--fuge); }
-.hero__lead { font-size: clamp(20px, 2.4vw, 26px); line-height: 1.35; color: var(--tinte); font-weight: 500; }
-.status { font-size: 17px; color: var(--grau); margin-bottom: 20px; }
-.status strong { color: var(--tinte); }
-.status--offen strong { color: #17663a; }
-
-.knoepfe { display: flex; flex-wrap: wrap; gap: 10px; }
+/* Knöpfe */
+.knoepfe { display: flex; flex-wrap: wrap; gap: 12px; }
 .knopf {
-  display: inline-block; padding: 13px 20px; font-weight: 700; font-size: 17px; text-decoration: none;
-  border: 2px solid var(--tinte); color: var(--tinte); background: transparent;
+  display: inline-block; padding: 14px 24px; border: 1px solid var(--gold); border-radius: 4px;
+  font-size: 16px; font-weight: 600; letter-spacing: .04em; text-decoration: none; text-align: center;
+  transition: background-color .2s, color .2s;
 }
-.knopf:hover { background: var(--tinte); color: #fff; }
-.knopf--rot { background: var(--rot); border-color: var(--rot); color: #fff; }
-.knopf--rot:hover { background: var(--rot-dunkel); border-color: var(--rot-dunkel); }
-.knopf--dunkel { background: var(--tinte); color: #fff; }
-.knopf--dunkel:hover { background: #333; }
+.knopf--gold { background: var(--gold); color: #17140f; }
+.knopf--gold:hover { background: var(--gold-hell); border-color: var(--gold-hell); }
+.knopf--linie { color: var(--gold); background: rgba(28, 27, 28, .35); }
+.knopf--linie:hover { background: var(--gold); color: #17140f; }
 
-/* Barbiersäule */
-.saeule { display: flex; flex-direction: column; align-items: center; width: clamp(46px, 7vw, 86px); }
-.saeule__kappe {
-  width: 100%; height: clamp(22px, 3vw, 34px); border-radius: 50% 50% 6px 6px / 90% 90% 6px 6px;
-  background: linear-gradient(90deg, #6f6f6f, #f4f4f4 38%, #fff 46%, #9a9a9a 70%, #4f4f4f);
-}
-.saeule__kappe--unten { border-radius: 6px 6px 50% 50% / 6px 6px 90% 90%; }
-.saeule__glas {
-  position: relative; width: 82%; height: clamp(200px, 30vw, 360px); overflow: hidden;
-  border-left: 1px solid rgba(0, 0, 0, .25); border-right: 1px solid rgba(0, 0, 0, .25);
-}
-.saeule__streifen {
-  position: absolute; inset: -100px 0 0;
-  background: repeating-linear-gradient(135deg, var(--rot) 0 18px, #fff 18px 30px, var(--blau) 30px 48px, #fff 48px 60px);
-  animation: saeule 2.6s linear infinite;
-}
-.saeule__glas::after {
+/* Kopfzeile: über dem Foto durchsichtig, beim Scrollen dunkel */
+.kopf { position: fixed; inset: 0 0 auto; z-index: 30; transition: background-color .3s, box-shadow .3s; }
+.kopf--fest { background: rgba(28, 27, 28, .96); box-shadow: 0 1px 0 var(--linie); }
+.kopf__in { display: flex; align-items: center; gap: 16px; height: 72px; }
+.kopf__nav { display: none; gap: 30px; margin-left: auto; }
+.kopf__nav a { text-decoration: none; font-size: 16px; color: var(--text); }
+.kopf__nav a:hover { color: var(--gold); }
+.kopf__tel { margin-left: auto; padding: 10px 16px; font-size: 15px; white-space: nowrap; }
+
+/* Hero */
+.hero { position: relative; min-height: 100svh; display: grid; align-items: end; overflow: hidden; background: #000; }
+.hero__bild, .hero__bild img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero__bild img { object-fit: cover; object-position: 50% 40%; }
+.hero::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, .38), rgba(0, 0, 0, 0) 28%, rgba(255, 255, 255, .55) 42%, rgba(255, 255, 255, 0) 56%, rgba(0, 0, 0, .42));
+  background: linear-gradient(180deg, rgba(10, 9, 10, .55) 0%, rgba(10, 9, 10, .35) 35%, rgba(10, 9, 10, .88) 78%, var(--grund) 100%);
 }
-/* eine Periode der Streifen in der Senkrechten: 60px / sin(45°) */
-@keyframes saeule { to { transform: translateY(84.85px); } }
+.hero__inhalt { position: relative; z-index: 1; padding-top: 120px; padding-bottom: clamp(48px, 9vh, 96px); text-align: center; display: flex; flex-direction: column; align-items: center; }
+.hero__saeule { width: 20px; height: 56px; color: var(--gold); margin-bottom: 18px; }
+.hero h1 { font-size: clamp(44px, 9vw, 104px); font-weight: 500; color: var(--text); }
+.hero__unter { font-family: var(--serif); font-size: clamp(20px, 2.6vw, 28px); color: var(--gold); margin: 14px 0 10px; }
+.hero__zeile { color: var(--grau); font-size: 17px; margin-bottom: 30px; }
+.hero__zeile strong { color: var(--text); font-weight: 600; }
+.hero .knoepfe { justify-content: center; }
 
-/* Preise: Steckbuchstaben-Tafel */
-.preise { background: #1a1816; color: #e9e5dc; padding: clamp(56px, 9vw, 120px) 0; }
-.preise h2 { color: #fff; margin-bottom: 24px; }
-.preise__in { display: grid; gap: clamp(32px, 5vw, 72px); }
-.preise__text { max-width: 560px; }
-.preise .klein { color: #bdb7ab; }
-.tafel {
-  padding: clamp(12px, 2vw, 20px);
-  background: linear-gradient(160deg, #8a6236, #6b4723 40%, #7d5730 70%, #5e3d1d);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12), 0 30px 60px -30px rgba(0, 0, 0, .8);
-}
-.tafel__filz {
-  container-type: inline-size;
-  padding: clamp(18px, 4cqi, 40px) clamp(14px, 4cqi, 40px);
-  background-color: #141414;
-  background-image: repeating-linear-gradient(180deg, rgba(255, 255, 255, .045) 0 1px, rgba(0, 0, 0, 0) 1px 7px);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, .7);
-}
-.tafel__liste { list-style: none; margin: 0; padding: 0; }
-.tafel__liste li {
-  display: flex; gap: 12px; align-items: baseline; justify-content: space-between;
-  font-size: clamp(15px, 5.2cqi, 27px); line-height: 1.9; font-weight: 600; text-transform: uppercase;
-  letter-spacing: .12em; color: #f4f2ec; font-variation-settings: "wdth" 72;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .9);
-}
-.tafel__liste li > span:first-child { min-width: 0; }
-.tafel__liste li > span:last-child { white-space: nowrap; flex: none; }
-.tafel__liste li > span:last-child::after { content: " €"; }
-.tafel__liste .bs { display: inline-block; }
+/* Abschnitte */
+.abschnitt { padding: clamp(64px, 10vw, 128px) 0; }
+.abschnitt--dunkel { background: var(--flaeche); }
+.kopfzeile { display: grid; gap: 16px; margin-bottom: clamp(32px, 5vw, 56px); }
+.kopfzeile p { color: var(--grau); max-width: 620px; margin: 0; }
 
-/* Bewertungen */
-.laden { padding: clamp(56px, 9vw, 120px) 0; background: var(--papier); }
-.laden__in { display: grid; gap: 24px; }
-.laden__text { max-width: 680px; color: var(--grau); }
-.gross { font-size: clamp(24px, 3vw, 32px); line-height: 1.25; color: var(--tinte); font-weight: 600; }
-.link { color: var(--rot); font-weight: 700; text-underline-offset: 4px; }
+/* Leistungen */
+.karten { display: grid; gap: 24px; }
+.karte { display: flex; flex-direction: column; border: 1px solid rgba(184, 151, 95, .45); border-radius: 8px; overflow: hidden; background: var(--flaeche); }
+.karte img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.karte__text { padding: 24px 24px 28px; display: flex; flex-direction: column; flex: 1; }
+.karte__text p { color: var(--grau); }
+.karte__text h3 { margin-bottom: 10px; }
+.karte__preis { font-variant-numeric: lining-nums; font-family: var(--serif); font-size: 22px; color: var(--text) !important; margin-top: auto; }
+.karte__link { color: var(--gold); font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; align-self: flex-start; padding-bottom: 2px; }
+.karte__link:hover { color: var(--gold-hell); }
 
-/* Öffnungszeiten und Anfahrt */
-.info { padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 80px); background: #fff; border-top: 1px solid #ddd8cc; }
-.info__in { display: grid; gap: 56px; }
-.info h2 { margin-bottom: 24px; }
-.zeiten__liste { margin: 0; border-top: 2px solid var(--tinte); }
-.zeiten__liste div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #ddd8cc; }
-.zeiten__liste dt { font-weight: 600; color: var(--tinte); }
-.zeiten__liste dd { margin: 0; color: var(--grau); white-space: nowrap; }
-.zeiten__liste .heute { background: var(--papier); box-shadow: -10px 0 0 var(--papier), 10px 0 0 var(--papier); }
-.zeiten__liste .heute dt::after { content: "heute"; margin-left: 10px; padding: 2px 6px; font-size: 13px; font-weight: 700; background: var(--rot); color: #fff; vertical-align: 2px; }
-.anfahrt address { font-style: normal; font-size: 22px; line-height: 1.45; color: var(--tinte); margin-bottom: 24px; }
-.linien { list-style: none; margin: 0 0 28px; padding: 0; }
-.linien li { display: flex; align-items: center; gap: 8px; padding: 8px 0; color: var(--grau); }
+/* Preisliste */
+.reiter { display: flex; gap: 8px; margin-bottom: 28px; border-bottom: 1px solid var(--linie); }
+.reiter button {
+  appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  padding: 12px 6px; margin-right: 18px; font: 600 17px Archivo, sans-serif; color: var(--grau); cursor: pointer;
+}
+.reiter button[aria-selected="true"] { color: var(--gold); border-bottom-color: var(--gold); }
+.reiter button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.liste + .liste { margin-top: 48px; }
+.js .liste + .liste { margin-top: 0; }
+.js .liste__titel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.liste__titel { margin-bottom: 16px; }
+.liste table { width: 100%; border-collapse: collapse; max-width: 860px; }
+.liste th, .liste td { padding: 13px 0; border-bottom: 1px solid var(--linie); text-align: left; vertical-align: baseline; }
+.liste tbody th { font-weight: 400; color: var(--text); padding-right: 16px; }
+.liste td { font-variant-numeric: lining-nums tabular-nums; text-align: right; white-space: nowrap; color: var(--gold); font-family: var(--serif); font-size: 19px; padding-left: 12px; }
+.liste td::after { content: " €"; }
+.liste thead th { font-size: 14px; font-weight: 600; letter-spacing: .06em; color: var(--grau); text-align: right; padding-left: 12px; }
+.liste--damen td { width: 4.6em; }
+.liste--damen td::after { content: ""; }
+@media (max-width: 599px) {
+  .liste--damen td { width: auto; padding-left: 10px; font-size: 17px; }
+  .liste--damen tbody th { font-size: 16px; hyphens: auto; }
+}
+.liste--extra { margin-top: 28px; }
+
+/* Galerie */
+.galerie { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.galerie a { display: block; overflow: hidden; border-radius: 6px; }
+.galerie img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; transition: transform .5s; }
+.galerie a:hover img { transform: scale(1.04); }
+.lightbox { padding: 0; border: 0; background: transparent; max-width: 94vw; max-height: 92vh; }
+.lightbox::backdrop { background: rgba(0, 0, 0, .88); }
+.lightbox img { max-width: 94vw; max-height: 92vh; object-fit: contain; }
+.lightbox__zu { position: fixed; top: 14px; right: 16px; width: 48px; height: 48px; border: 1px solid var(--gold); border-radius: 50%; background: var(--grund); color: var(--gold); font-size: 28px; line-height: 1; cursor: pointer; }
+
+/* Der Laden */
+.laden { display: grid; background: var(--grund); }
+.laden__bild img { width: 100%; height: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; }
+.laden__text { padding: clamp(48px, 8vw, 104px) var(--rand); max-width: 680px; }
+.laden__text h2 { margin-bottom: 24px; }
+.laden__text > p { color: var(--grau); }
+.bewertung { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--linie); }
+.bewertung p { color: var(--grau); }
+.bewertung__zahl { font-variant-numeric: lining-nums; font-family: var(--serif); font-size: 30px; color: var(--text) !important; margin-bottom: 6px; }
+.sterne { color: transparent; background: linear-gradient(90deg, var(--gold) 90%, #5a554c 90%); -webkit-background-clip: text; background-clip: text; letter-spacing: .08em; font-size: 22px; margin-right: 8px; vertical-align: 3px; }
+
+/* Kontakt */
+.kontakt { display: grid; gap: 48px; }
+.kontakt h3 { margin-bottom: 18px; }
+.kontakt address { font-style: normal; font-size: 20px; line-height: 1.5; margin-bottom: 12px; }
+.tel { font-variant-numeric: lining-nums; font-family: var(--serif); font-size: 26px; color: var(--gold); text-decoration: none; }
+.linien { list-style: none; margin: 24px 0 0; padding: 0; }
+.linien li { display: flex; align-items: center; gap: 8px; padding: 7px 0; color: var(--grau); }
 .linien li span:last-child { margin-left: 6px; }
-.kreis {
-  flex: none; display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
-  background: var(--tinte); color: #fff; font-weight: 800; font-size: 15px;
-}
-.karte { margin-top: clamp(40px, 6vw, 72px); }
-.karte img { width: 100%; border: 1px solid #ddd8cc; aspect-ratio: 3 / 2; object-fit: cover; }
+.kreis { flex: none; display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold); font-weight: 700; font-size: 14px; }
+.zeiten { margin: 0; }
+.zeiten div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--linie); }
+.zeiten dd { margin: 0; color: var(--grau); white-space: nowrap; }
+.zeiten .heute dt, .zeiten .heute dd { color: var(--gold); }
+.zeiten .heute dt::after { content: "heute"; margin-left: 10px; padding: 1px 7px; border: 1px solid var(--gold); border-radius: 3px; font-size: 13px; vertical-align: 2px; }
+.kontakt__knoepfe { margin-top: 40px; }
+.stadtplan { margin: 48px 0 0; }
+.stadtplan img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; border: 1px solid var(--linie); }
 
-/* Fuß mit Schachbrettboden */
-.fuss { background: var(--tinte); color: #cfcac0; font-size: 16px; }
-.fuss__boden {
-  height: 48px;
-  background-color: #f1eee6;
-  background-image: conic-gradient(var(--tinte) 25%, transparent 0 50%, var(--tinte) 0 75%, transparent 0);
-  background-size: 48px 48px;
-}
-.fuss__in { display: grid; gap: 20px; padding-top: 40px; padding-bottom: 48px; }
+/* Fuß */
+.fuss { border-top: 1px solid rgba(184, 151, 95, .4); font-size: 16px; color: var(--grau); }
+.fuss__in { display: grid; gap: 22px; padding-top: 48px; padding-bottom: 56px; }
 .fuss p { margin: 0; }
-.fuss a { color: #fff; }
-.fuss__marke { font-weight: 800; font-size: 22px; color: #fff; font-variation-settings: "wdth" 85; }
+.fuss a { color: var(--text); }
+.fuss a:hover { color: var(--gold); }
 
 /* Unterseiten */
-.text-seite { padding: clamp(40px, 8vw, 96px) 0; background: #fff; }
+.text-seite { padding: 140px 0 96px; }
 .text-seite .wrap { max-width: 820px; }
-.text-seite h1 { font-size: clamp(32px, 5vw, 48px); margin-bottom: 28px; }
-.text-seite h2 { font-size: 22px; margin: 32px 0 10px; }
+.text-seite h1 { font-size: clamp(36px, 5vw, 52px); margin-bottom: 28px; }
+.text-seite h2 { font-size: 24px; margin: 32px 0 10px; }
+.text-seite p { color: var(--grau); }
+.text-seite ~ .fuss, .text-seite { background: var(--grund); }
+.kopf--seite { background: rgba(28, 27, 28, .96); box-shadow: 0 1px 0 var(--linie); }
 
 @media (min-width: 600px) {
   .nur-gross { display: inline; }
   .nur-klein { display: none; }
+  .galerie { grid-template-columns: repeat(4, 1fr); }
   .fuss__in { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 900px) {
   .kopf__nav { display: flex; }
-  .kopf__tel { margin-left: 12px; }
-  .preise__in { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; }
-  .laden__in { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
-  .info__in { grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 120px); }
+  .kopf__tel { margin-left: 14px; }
+  .kopfzeile { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: end; gap: 48px; }
+  .karten { grid-template-columns: repeat(3, 1fr); }
+  .karte img { aspect-ratio: 4 / 5; }
+  .laden { grid-template-columns: 1fr 1fr; }
+  .laden__bild img { aspect-ratio: auto; min-height: 640px; }
+  .laden__text { align-self: center; padding-left: clamp(40px, 6vw, 96px); }
+  .kontakt { grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 120px); }
   .fuss__in { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .saeule__streifen { animation: none; }
+  .galerie img { transition: none; }
 }
